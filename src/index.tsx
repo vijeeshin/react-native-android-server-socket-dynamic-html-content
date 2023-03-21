@@ -18,7 +18,7 @@ const AndroidServerSocketDynamicHtmlContent =
         }
       );
 
-export function startServer(port) {
+export function startServer(port: number) {
   return AndroidServerSocketDynamicHtmlContent.startServer(port);
 }
 
@@ -26,6 +26,6 @@ export function stopServer() {
   return AndroidServerSocketDynamicHtmlContent.stopServer();
 }
 
-export function sendData(data) {
+export function sendData(data: string) {
   return AndroidServerSocketDynamicHtmlContent.sendData(data);
 }
