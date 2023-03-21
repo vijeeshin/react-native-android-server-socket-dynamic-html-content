@@ -2,11 +2,10 @@
   "name": "react-native-android-server-socket-dynamic-html-content",
   "version": "0.1.0",
   "description": "test",
-  "main": "lib/commonjs/index.js",
-  "module": "lib/module/index.js",
-  "types": "lib/typescript/src/index.d.ts",
-  "react-native": "src/index.tsx",
-  "source": "src/index.tsx",
+  "main": "lib/commonjs/index",
+  "types": "src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
   "files": [
     "src",
     "lib",
@@ -148,8 +147,12 @@
     "output": "lib",
     "targets": [
       "commonjs",
-      "module",
-      "typescript"
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
     ]
   }
 }
