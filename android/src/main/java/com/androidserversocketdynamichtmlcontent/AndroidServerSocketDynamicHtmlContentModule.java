@@ -22,11 +22,11 @@ import java.util.HashMap;
 @ReactModule(name = AndroidServerSocketDynamicHtmlContentModule.NAME)
 public class AndroidServerSocketDynamicHtmlContentModule extends ReactContextBaseJavaModule {
   public static final String NAME = "AndroidServerSocketDynamicHtmlContent";
-  public final ServerSocket serverSocket = null;
-  public final Socket clientSocket = null;
-  public final Thread serverThread = null;
-  public final PrintWriter out = null;
-  public final BufferedReader in = null;
+  public  ServerSocket serverSocket = null;
+  public  Socket clientSocket = null;
+  public  Thread serverThread = null;
+  public  PrintWriter out = null;
+  public  BufferedReader in = null;
 
   public AndroidServerSocketDynamicHtmlContentModule(ReactApplicationContext reactContext) {
     super(reactContext);
