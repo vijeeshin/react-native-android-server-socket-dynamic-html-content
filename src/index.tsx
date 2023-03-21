@@ -18,14 +18,14 @@ const AndroidServerSocketDynamicHtmlContent =
         }
       );
 
-export function startServer(port: number) {
+export function startServer(port: number):any {
   return AndroidServerSocketDynamicHtmlContent.startServer(port);
 }
 
-export function stopServer() {
+export function stopServer():any {
   return AndroidServerSocketDynamicHtmlContent.stopServer();
 }
 
-export function sendData(data: string) {
+export function sendData(data: string):any {
   return AndroidServerSocketDynamicHtmlContent.sendData(data);
 }
