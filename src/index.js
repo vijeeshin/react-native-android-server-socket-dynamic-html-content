@@ -18,6 +18,14 @@ const AndroidServerSocketDynamicHtmlContent =
         }
       );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return AndroidServerSocketDynamicHtmlContent.multiply(a, b);
+export function startServer(port) {
+  return AndroidServerSocketDynamicHtmlContent.startServer(port);
+}
+
+export function stopServer() {
+  return AndroidServerSocketDynamicHtmlContent.stopServer();
+}
+
+export function sendData(data) {
+  return AndroidServerSocketDynamicHtmlContent.sendData(data);
 }
