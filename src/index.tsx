@@ -6,16 +6,17 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-const AndroidServerSocketDynamicHtmlContent = NativeModules.AndroidServerSocketDynamicHtmlContent
-  ? NativeModules.AndroidServerSocketDynamicHtmlContent
-  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+const AndroidServerSocketDynamicHtmlContent =
+  NativeModules.AndroidServerSocketDynamicHtmlContent
+    ? NativeModules.AndroidServerSocketDynamicHtmlContent
+    : new Proxy(
+        {},
+        {
+          get() {
+            throw new Error(LINKING_ERROR);
+          },
+        }
+      );
 
 export function multiply(a: number, b: number): Promise<number> {
   return AndroidServerSocketDynamicHtmlContent.multiply(a, b);
